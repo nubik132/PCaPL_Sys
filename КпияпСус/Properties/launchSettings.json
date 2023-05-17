@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "КпияпСус": {
+      "commandName": "Project"
+    },
+    "Профиль 1": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\Student\\source\\repos\\КпияпСус\\Лаб9\\Лаб9.csproj"
+    }
+  }
+}
