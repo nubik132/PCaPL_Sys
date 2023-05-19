@@ -8,12 +8,6 @@ using System.Windows.Input;
 
 namespace Лаб29
 {
-    public interface ICommand
-    {
-        event EventHandler CanExecuteChanged;
-        void Execute(object parameter);
-        bool CanExecute(object parameter);
-    }
     public class RelayCommand : ICommand
     {
         private Action<object> execute;
