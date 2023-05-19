@@ -7,7 +7,7 @@ namespace Лаб29
     public class ApplicationViewModel : INotifyPropertyChanged
     {
         private Bus selectedBus;
-        
+
         private RelayCommand removeCommand;
         private RelayCommand addCommand;
         public RelayCommand AddCommand
@@ -17,7 +17,7 @@ namespace Лаб29
                 return addCommand ??
                   (addCommand = new RelayCommand(obj =>
                   {
-                      Bus bus = new Bus() { Seats = 52, Busnumber = 11, Vodila = "Phil" };
+                      Bus bus = new Bus() { Seats = 0, Busnumber = 0, Vodila = "" };
                       Buses.Insert(0, bus);
                       SelectedBus = bus;
                   }));
@@ -37,28 +37,6 @@ namespace Лаб29
                       }
                   },
                  (obj) => Buses.Count > 0));
-            }
-        }
-        private RelayCommand doubleCommand;
-        public RelayCommand DoubleCommand
-        {
-            get
-            {
-                return doubleCommand ??
-                    (doubleCommand = new RelayCommand(obj =>
-                    {
-                        Bus bus = obj as Bus;
-                        if (bus != null)
-                        {
-                            Bus busCopy = new Bus
-                            {
-                                Vodila = bus.Vodila,
-                                Busnumber = bus.Busnumber,
-                                Seats = bus.Seats
-                            };
-                            Buses.Insert(0, busCopy);
-                        }
-                    }));
             }
         }
 
@@ -91,8 +69,3 @@ namespace Лаб29
         }
     }
 }
-
-
-
-
-

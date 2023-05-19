@@ -4,16 +4,6 @@ using System.Windows.Input;
 
 namespace Лаб29
 {
-    {
-        event EventHandler CanExecuteChanged;
-        void Execute(object parameter);
-        bool CanExecute(object parameter);
-    }
-    {
-        event EventHandler CanExecuteChanged;
-        void Execute(object parameter);
-        bool CanExecute(object parameter);
-    }
     public class RelayCommand : ICommand
     {
         private Action<object> execute;
@@ -43,4 +33,3 @@ namespace Лаб29
 
     }
 }
-

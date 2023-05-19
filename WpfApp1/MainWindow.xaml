@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-        xmlns:лаб29="clr-namespace:Лаб29" d:DataContext="{d:DesignInstance Type=лаб29:ApplicationViewModel}"
+        xmlns:лаб29="clr-namespace:Лаб29" 
+        d:DataContext="{d:DesignInstance Type=лаб29:ApplicationViewModel}"
         mc:Ignorable="d"
         Title="Нереальные автобусы" Height="350" Width="525">
     <Window.Resources>
@@ -35,6 +36,7 @@
                         <TextBlock FontSize="18" Text="{Binding Path=Vodila}" />
                         <TextBlock Text="{Binding Path=Busnumber}" />
                         <TextBlock Text="{Binding Path=Seats}" />
+                        
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -43,7 +45,6 @@
             <Button Command="{Binding AddCommand}">+</Button>
             <Button Command="{Binding RemoveCommand}"
                     CommandParameter="{Binding SelectedBus}">-</Button>
-
         </StackPanel>
 
         <StackPanel Grid.Column="1" DataContext="{Binding SelectedBus}">
@@ -57,3 +58,4 @@
         </StackPanel>
     </Grid>
 </Window>
+

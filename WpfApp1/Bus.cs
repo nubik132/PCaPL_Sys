@@ -3,39 +3,36 @@ using System.Runtime.CompilerServices;
 
 namespace Лаб29
 {
-    public class BusViewModel : INotifyPropertyChanged
+    public class Bus : INotifyPropertyChanged
     {
-        private Bus bus;
-
-        public BusViewModel(Bus p)
-        {
-            bus = p;
-        }
+        private int seats;
+        private int busnumber;
+        private string vodila;
 
         public int Seats
         {
-            get { return bus.Seats; }
+            get { return seats; }
             set
             {
-                bus.Seats = value;
+                seats = value;
                 OnPropertyChanged("Seats");
             }
         }
         public int Busnumber
         {
-            get { return bus.Busnumber; }
+            get { return busnumber; }
             set
             {
-                bus.Busnumber = value;
+                busnumber = value;
                 OnPropertyChanged("Bus number");
             }
         }
         public string Vodila
         {
-            get { return bus.Vodila; }
+            get { return vodila; }
             set
             {
-                bus.Vodila = value;
+                vodila = value;
                 OnPropertyChanged("Vodila");
             }
         }
@@ -48,3 +45,4 @@ namespace Лаб29
         }
     }
 }
+
